@@ -1,7 +1,14 @@
-import React from "react";
+import { data } from "@/app/api/data";
+import { Search } from "./components/Search";
+import { Navigation } from "./components/Navigation";
 
 export const Sidebar = () => {
   return (
-    <aside className="fixed top-0 bottom-0 left-0 z-10 h-full w-64 bg-background"></aside>
+    <aside className="sticky top-14 z-10 h-[calc(100vh-56px)] w-64 bg-background text-sm overflow-y-auto">
+      <div className="h-auto w-full py-8 space-y-4">
+        {/* <Search /> */}
+        <Navigation />
+      </div>
+    </aside>
   );
 };
